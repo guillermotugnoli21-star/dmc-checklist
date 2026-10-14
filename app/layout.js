@@ -4,6 +4,13 @@ export const metadata = {
   title: 'DMC Checklist - Sistema Operativo',
   description: 'Sistema de checklist operativo multi-unidad de negocio',
   viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+  manifest: '/manifest.json',
+  themeColor: '#3b82f6',
+  appleWebApp: {
+    capable: true,
+    title: 'DMC Checklist',
+    statusBarStyle: 'black-translucent',
+  },
 }
 
 export default function RootLayout({ children }) {

@@ -19,15 +19,30 @@ export default function Home() {
         <LoginForm />
       </div>
       
-      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-        <h3 className="font-semibold text-blue-800 mb-2">📱 Instala esta app</h3>
-        <p className="text-blue-700 text-sm">
-          Esta es una PWA. Para instalarla en tu celular:
+      <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+        <h3 className="font-semibold text-green-800 mb-2 flex items-center">
+          <span className="text-xl mr-2">📱</span> Instala esta app (PWA)
+        </h3>
+        <p className="text-green-700 text-sm mb-3">
+          Ahora puedes instalarla como app nativa en tu celular:
         </p>
-        <ul className="text-blue-700 text-sm mt-2 space-y-1">
-          <li>• <strong>Android:</strong> Abre opciones (⋮) → "Instalar app"</li>
-          <li>• <strong>iPhone:</strong> Comparte (⎋) → "Añadir a pantalla de inicio"</li>
-        </ul>
+        <div className="bg-white rounded-lg p-3 mb-3">
+          <h4 className="font-medium text-gray-800 mb-2">📲 Android:</h4>
+          <ol className="text-gray-700 text-sm ml-4 space-y-1">
+            <li>1. Abre opciones (⋮) arriba derecha</li>
+            <li>2. Selecciona <strong>"Instalar app"</strong></li>
+            <li>3. Confirma la instalación</li>
+          </ol>
+        </div>
+        <div className="bg-white rounded-lg p-3">
+          <h4 className="font-medium text-gray-800 mb-2">🍎 iPhone:</h4>
+          <ol className="text-gray-700 text-sm ml-4 space-y-1">
+            <li>1. Abre en <strong>Safari</strong> (no Chrome)</li>
+            <li>2. Toca ⎋ (compartir) abajo</li>
+            <li>3. Busca <strong>"Añadir a pantalla de inicio"</strong></li>
+            <li>4. Confirma</li>
+          </ol>
+        </div>
       </div>
     </div>
   )
