@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Fondo circular azul -->
+  <circle cx="256" cy="256" r="240" fill="#3b82f6"/>
+  
+  <!-- Marco blanco -->
+  <circle cx="256" cy="256" r="220" fill="white"/>
+  
+  <!-- Texto DMC -->
+  <text x="256" y="200" font-family="Arial, sans-serif" font-size="80" 
+        font-weight="bold" fill="#1e40af" text-anchor="middle">DMC</text>
+  
+  <!-- Texto Checklist -->
+  <text x="256" y="280" font-family="Arial, sans-serif" font-size="40" 
+        fill="#1e40af" text-anchor="middle">Checklist</text>
+  
+  <!-- Icono check -->
+  <path d="M200 320 L240 360 L320 280" stroke="#10b981" stroke-width="20" 
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

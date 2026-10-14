@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { loginWithCode } from '../lib/firebase'
 
 export default function LoginForm() {
   const [code, setCode] = useState('')
@@ -13,17 +14,30 @@ export default function LoginForm() {
     setError('')
     
     try {
-      // TODO: Implementar autenticación con Firebase
-      console.log('Código ingresado:', code)
+      // Validar longitud mínima
+      if (code.length < 6) {
+        setError('El código debe tener al menos 6 caracteres')
+        setLoading(false)
+        return
+      }
       
-      // Simulación de autenticación
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      // Intentar autenticación
+      const result = await loginWithCode(code)
       
-      // Por ahora solo redirige a dashboard de prueba
-      window.location.href = '/dashboard'
+      if (result.success) {
+        // Guardar en localStorage temporalmente
+        localStorage.setItem('dmc_user', JSON.stringify(result.user))
+        localStorage.setItem('dmc_code', code)
+        
+        // Redirigir al dashboard
+        window.location.href = '/dashboard'
+      } else {
+        setError(result.error || 'Código incorrecto. Intenta nuevamente.')
+      }
       
     } catch (err) {
-      setError('Código incorrecto. Intenta nuevamente.')
+      console.error('Login error:', err)
+      setError('Error de conexión. Verifica tu internet.')
     } finally {
       setLoading(false)
     }
