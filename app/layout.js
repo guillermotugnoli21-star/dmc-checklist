@@ -11,6 +11,16 @@ export const metadata = {
     title: 'DMC Checklist',
     statusBarStyle: 'black-translucent',
   },
+  openGraph: {
+    type: 'website',
+    title: 'DMC Checklist',
+    description: 'Sistema de checklist operativo multi-unidad de negocio',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'DMC Checklist',
+    description: 'Sistema de checklist operativo multi-unidad de negocio',
+  },
 }
 
 export default function RootLayout({ children }) {
